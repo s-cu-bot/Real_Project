@@ -17,7 +17,7 @@ public class SecurityConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		//css와 index 경로에 대한 요청은 모든 사용자가 허용
 		//user 경로에 대한 요청은 'USER' 역할 사용자만 허용 (.hasRole("USER"))
-		http.csrf().disable().authorizeRequests(authorize -> authorize.requestMatchers("/css/**", "/index").permitAll()
+		http.csrf().disable().authorizeRequests(authorize -> authorize.requestMatchers("/css/**", "/js/**", "/index").permitAll()
 				.requestMatchers("/user/**").hasRole("USER")).formLogin(formLogin -> formLogin.loginPage("/login"));
 		return http.build();
 	}
