@@ -39,5 +39,17 @@
 [user/index] / user화면
 </pre></code>
 
+------
+**[path : resources\templates\]**
+<pre><code>[index] / 메인화면
+[login/index] / 로그인화면
+[user/index] / user화면
+</pre></code>
+
+-------
+**[path : resources\application.properties\]**
+<pre><code> mysql 연동
+</pre></code>
+
 -------
 참고 : https://github.com/Youngerjesus/spring-security/blob/master/README.md
