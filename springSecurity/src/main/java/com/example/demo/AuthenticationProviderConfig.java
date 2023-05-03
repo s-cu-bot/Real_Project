@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.core.userdetails.User;
 import com.example.demo.domain.MyUserDetail;
 
 //Security Filter Chain에서 인증 요청을 처리하는 동안 자동 사용 (Authentication Manager)
@@ -38,18 +35,5 @@ public class AuthenticationProviderConfig {
 
         //인증 성공 시 Authentication 객체 생성하여 인증 사용자 정보와 권한 전달
         return provider;
-    }
-
-    @Bean
-    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
-        //사용자 세부 정보 관리
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-
-        //id:user / pw:user123 / role:USER 만듦 (추후 DB와 연결 예정)
-        manager.createUser(User.withUsername("user")
-                .password(passwordEncoder.encode("user123"))
-                .roles("USER")
-                .build());
-        return manager;
     }
 }

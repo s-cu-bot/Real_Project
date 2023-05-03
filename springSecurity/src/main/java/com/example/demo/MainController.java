@@ -10,6 +10,11 @@ public class MainController {
 		return "login/index";
 	}
 
+	@RequestMapping("/register")
+	public String register() {
+		return "login/register";
+	}
+	
 	@RequestMapping("/user")
 	public String user() {
 		return "user/index";
