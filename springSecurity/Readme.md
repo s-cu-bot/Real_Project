@@ -50,13 +50,6 @@
 **[path : resources\templates\]**
 <pre><code>[index] / 메인화면
 [login/index] / 로그인화면
-[user/index] / user화면
-</pre></code>
-
-------
-**[path : resources\templates\]**
-<pre><code>[index] / 메인화면
-[login/index] / 로그인화면
 [login/register] / 회원가입화면
 [user/index] / user화면
 </pre></code>
