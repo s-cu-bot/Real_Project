@@ -33,6 +33,20 @@
 </pre></code>
 
 ------
+**[path : example\demo\domain]**
+<pre><code> [CustomUserDetails.java]
+
+- 유저 정보 인터페이스
+- 기본적으로 정의된 UserDetails를 상속받아 확장하여 사용
+</pre></code>
+
+<pre><code> [MyUserDetail.java]
+
+- DB에서 유저정보를 저장하고 갖고오는 기능
+- CustomUserDetails에 정의된 형태로 통신
+</pre></code>
+
+------
 **[path : resources\templates\]**
 <pre><code>[index] / 메인화면
 [login/index] / 로그인화면
@@ -43,6 +57,7 @@
 **[path : resources\templates\]**
 <pre><code>[index] / 메인화면
 [login/index] / 로그인화면
+[login/register] / 회원가입화면
 [user/index] / user화면
 </pre></code>
 
