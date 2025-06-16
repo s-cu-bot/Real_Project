@@ -8,8 +8,8 @@ from weaviate.classes.init import Auth
 import weaviate
 
 # 초기 설정
-WEAVIATE_URL="6dn0ha2drbehrqgdifyobq.c0.asia-southeast1.gcp.weaviate.cloud"
-WEAVIATE_API_KEY="N3lCKzFXNGNkSU93S0hOVF81VW1SNkN1a012Y0Q0NzNLSHZBVkxIc09xZ3h0Mm9OQnFRbUxsZVNaeUE4PV92MjAw"
+WEAVIATE_URL="---"
+WEAVIATE_API_KEY="---"
 
 def pdf_to_text(path):
     pdfReader = PyPDF2.PdfReader(path)
